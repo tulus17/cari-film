@@ -1,6 +1,6 @@
 //card baru
 $.ajax({
-  url: "http://www.omdbapi.com/?apikey=4faff805&s=top",
+  url: "https://www.omdbapi.com/?apikey=4faff805&s=top",
   success: (hasil) => {
     //megubah hasil request menjadi array
     const moviess = hasil.Search;
@@ -14,7 +14,7 @@ $.ajax({
     //tombol detail di klik
     $(".modal-detail-button").on("click", function () {
       $.ajax({
-        url: "http://www.omdbapi.com/?apikey=4faff805&i=" + $(this).data("imdbid"),
+        url: "https://www.omdbapi.com/?apikey=4faff805&i=" + $(this).data("imdbid"),
         success: (m) => {
           const movieDetail = showMovieDetail(m);
           $(".modal-body").html(movieDetail);
@@ -32,7 +32,7 @@ $.ajax({
 
 $(".search-btnn").on("click", function () {
   $.ajax({
-    url: "http://www.omdbapi.com/?apikey=4faff805&s=" + $(".input-keyword").val(),
+    url: "https://www.omdbapi.com/?apikey=4faff805&s=" + $(".input-keyword").val(),
     success: (results) => {
       //megubah hasil request menjadi array
       const movies = results.Search;
@@ -45,7 +45,7 @@ $(".search-btnn").on("click", function () {
       //ketika tombol detail di click
       $(".modal-detail-button").on("click", function () {
         $.ajax({
-          url: "http://www.omdbapi.com/?apikey=4faff805&i=" + $(this).data("imdbid"),
+          url: "https://www.omdbapi.com/?apikey=4faff805&i=" + $(this).data("imdbid"),
           success: (m) => {
             const movieDetail = showMovieDetail(m);
             $(".modal-body").html(movieDetail);
