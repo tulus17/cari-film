@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet" />
+    <title>CariFILM</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: #f8f8f8;
+      }
+      .fon {
+        font-family: "Mochiy Pop One", sans-serif;
+      }
+      .mneg {
+        margin-bottom: -40px;
+      }
+      .judul span {
+        color: rgb(46, 122, 167);
+      }
+    </style>
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col">
+          <h1 class="judul fon">Cari <span>FILM</span></h1>
+        </div>
+      </div>
+
+      <!-- search box -->
+      <div class="row">
+        <div class="col-md-8">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control input-keyword" placeholder="Cari" />
+            <button class="btn btn-primary search-btnn ms-2" type="button">Search</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- crousel -->
+      <div class="row">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner shadow">
+            <div class="carousel-item active">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS6t3Dh7YIc2BK0ymhU9zzcqBKaS7TxPDjwA&usqp=CAU" class="d-block w-100 img-fluid img-thumbnail" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUVEoQY_AVg1dnfTIkgGYRinKye4IxlBvv6Q&usqp=CAU" class="d-block w-100 img-fluid img-thumbnail" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH59fgz_S3hyI28UNvwdWlzhxoM_2Xv1wmoQ&usqp=CAU" class="d-block w-100 img-fluid img-thumbnail" alt="..." />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- cards -->
+      <div class="row movie-container"></div>
+      <div class="col-md-4 bg-light shadow rounded mt-5 mneg"><h3 class="p-2 text-center">Rekomendasi Film 2021</h3></div>
+
+      <div class="row movie-containeres mt-0"></div>
+
+      <!-- awal moodal -->
+      <!-- Modal -->
+      <div class="modal fade" id="movieDetailModal" tabindex="-1" aria-labelledby="movieDetailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="movieDetailModalLabel"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
